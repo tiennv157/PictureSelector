@@ -82,4 +82,6 @@ public class LanguageConfig {
      * 哈萨克斯坦
      */
     public static final int KK = 13;
+
+    public static final int ID = 14;
 }
