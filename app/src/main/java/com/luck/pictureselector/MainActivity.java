@@ -536,7 +536,7 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
 
                                     @Override
                                     public long onSelectAnim(View view) {
-                                        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.ps_anim_modal_in);
+                                        Animation animation = AnimationUtils.loadAnimation(getContext(), com.luck.picture.lib.R.anim.ps_anim_modal_in);
                                         view.startAnimation(animation);
                                         return animation.getDuration();
                                     }
@@ -1669,19 +1669,19 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 options.setStatusBarColor(statusBarColor);
                 options.setToolbarColor(statusBarColor);
             } else {
-                options.setStatusBarColor(ContextCompat.getColor(getContext(), R.color.ps_color_grey));
-                options.setToolbarColor(ContextCompat.getColor(getContext(), R.color.ps_color_grey));
+                options.setStatusBarColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_grey));
+                options.setToolbarColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_grey));
             }
             TitleBarStyle titleBarStyle = selectorStyle.getTitleBarStyle();
             if (StyleUtils.checkStyleValidity(titleBarStyle.getTitleTextColor())) {
                 options.setToolbarWidgetColor(titleBarStyle.getTitleTextColor());
             } else {
-                options.setToolbarWidgetColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                options.setToolbarWidgetColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
             }
         } else {
-            options.setStatusBarColor(ContextCompat.getColor(getContext(), R.color.ps_color_grey));
-            options.setToolbarColor(ContextCompat.getColor(getContext(), R.color.ps_color_grey));
-            options.setToolbarWidgetColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+            options.setStatusBarColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_grey));
+            options.setToolbarColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_grey));
+            options.setToolbarWidgetColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
         }
         return options;
     }
@@ -1916,6 +1916,8 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 tv_select_video_num.setText(String.valueOf(maxSelectVideoNum));
                 mAdapter.setSelectMax(maxSelectVideoNum + maxSelectNum);
                 break;
+            default:
+                break;
         }
     }
 
@@ -2064,14 +2066,14 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 break;
             case R.id.rb_photo_default_animation:
                 PictureWindowAnimationStyle defaultAnimationStyle = new PictureWindowAnimationStyle();
-                defaultAnimationStyle.setActivityEnterAnimation(R.anim.ps_anim_enter);
-                defaultAnimationStyle.setActivityExitAnimation(R.anim.ps_anim_exit);
+                defaultAnimationStyle.setActivityEnterAnimation(com.luck.picture.lib.R.anim.ps_anim_enter);
+                defaultAnimationStyle.setActivityExitAnimation(com.luck.picture.lib.R.anim.ps_anim_exit);
                 selectorStyle.setWindowAnimationStyle(defaultAnimationStyle);
                 break;
             case R.id.rb_photo_up_animation:
                 PictureWindowAnimationStyle animationStyle = new PictureWindowAnimationStyle();
-                animationStyle.setActivityEnterAnimation(R.anim.ps_anim_up_in);
-                animationStyle.setActivityExitAnimation(R.anim.ps_anim_down_out);
+                animationStyle.setActivityEnterAnimation(com.luck.picture.lib.R.anim.ps_anim_up_in);
+                animationStyle.setActivityExitAnimation(com.luck.picture.lib.R.anim.ps_anim_down_out);
                 selectorStyle.setWindowAnimationStyle(animationStyle);
                 break;
             case R.id.rb_default_style:
@@ -2080,32 +2082,32 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 break;
             case R.id.rb_white_style:
                 TitleBarStyle whiteTitleBarStyle = new TitleBarStyle();
-                whiteTitleBarStyle.setTitleBackgroundColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                whiteTitleBarStyle.setTitleBackgroundColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
                 whiteTitleBarStyle.setTitleDrawableRightResource(R.drawable.ic_orange_arrow_down);
-                whiteTitleBarStyle.setTitleLeftBackResource(R.drawable.ps_ic_black_back);
-                whiteTitleBarStyle.setTitleTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_black));
-                whiteTitleBarStyle.setTitleCancelTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_53575e));
+                whiteTitleBarStyle.setTitleLeftBackResource(com.luck.picture.lib.R.drawable.ps_ic_black_back);
+                whiteTitleBarStyle.setTitleTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_black));
+                whiteTitleBarStyle.setTitleCancelTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_53575e));
                 whiteTitleBarStyle.setDisplayTitleBarLine(true);
 
                 BottomNavBarStyle whiteBottomNavBarStyle = new BottomNavBarStyle();
                 whiteBottomNavBarStyle.setBottomNarBarBackgroundColor(Color.parseColor("#EEEEEE"));
-                whiteBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_53575e));
+                whiteBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_53575e));
 
-                whiteBottomNavBarStyle.setBottomPreviewNormalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_9b));
-                whiteBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_fa632d));
+                whiteBottomNavBarStyle.setBottomPreviewNormalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_9b));
+                whiteBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_fa632d));
                 whiteBottomNavBarStyle.setCompleteCountTips(false);
-                whiteBottomNavBarStyle.setBottomEditorTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_53575e));
-                whiteBottomNavBarStyle.setBottomOriginalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_53575e));
+                whiteBottomNavBarStyle.setBottomEditorTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_53575e));
+                whiteBottomNavBarStyle.setBottomOriginalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_53575e));
 
                 SelectMainStyle selectMainStyle = new SelectMainStyle();
-                selectMainStyle.setStatusBarColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                selectMainStyle.setStatusBarColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
                 selectMainStyle.setDarkStatusBarBlack(true);
-                selectMainStyle.setSelectNormalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_9b));
-                selectMainStyle.setSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_fa632d));
+                selectMainStyle.setSelectNormalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_9b));
+                selectMainStyle.setSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_fa632d));
                 selectMainStyle.setPreviewSelectBackground(R.drawable.ps_demo_white_preview_selector);
-                selectMainStyle.setSelectBackground(R.drawable.ps_checkbox_selector);
-                selectMainStyle.setSelectText(R.string.ps_done_front_num);
-                selectMainStyle.setMainListBackgroundColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                selectMainStyle.setSelectBackground(com.luck.picture.lib.R.drawable.ps_checkbox_selector);
+                selectMainStyle.setSelectText(com.luck.picture.lib.R.string.ps_done_front_num);
+                selectMainStyle.setMainListBackgroundColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
 
                 selectorStyle.setTitleBarStyle(whiteTitleBarStyle);
                 selectorStyle.setBottomBarStyle(whiteBottomNavBarStyle);
@@ -2113,28 +2115,28 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 break;
             case R.id.rb_num_style:
                 TitleBarStyle blueTitleBarStyle = new TitleBarStyle();
-                blueTitleBarStyle.setTitleBackgroundColor(ContextCompat.getColor(getContext(), R.color.ps_color_blue));
+                blueTitleBarStyle.setTitleBackgroundColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_blue));
 
                 BottomNavBarStyle numberBlueBottomNavBarStyle = new BottomNavBarStyle();
-                numberBlueBottomNavBarStyle.setBottomPreviewNormalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_9b));
-                numberBlueBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_blue));
-                numberBlueBottomNavBarStyle.setBottomNarBarBackgroundColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                numberBlueBottomNavBarStyle.setBottomPreviewNormalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_9b));
+                numberBlueBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_blue));
+                numberBlueBottomNavBarStyle.setBottomNarBarBackgroundColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
                 numberBlueBottomNavBarStyle.setBottomSelectNumResources(R.drawable.ps_demo_blue_num_selected);
-                numberBlueBottomNavBarStyle.setBottomEditorTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_53575e));
-                numberBlueBottomNavBarStyle.setBottomOriginalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_53575e));
+                numberBlueBottomNavBarStyle.setBottomEditorTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_53575e));
+                numberBlueBottomNavBarStyle.setBottomOriginalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_53575e));
 
 
                 SelectMainStyle numberBlueSelectMainStyle = new SelectMainStyle();
-                numberBlueSelectMainStyle.setStatusBarColor(ContextCompat.getColor(getContext(), R.color.ps_color_blue));
+                numberBlueSelectMainStyle.setStatusBarColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_blue));
                 numberBlueSelectMainStyle.setSelectNumberStyle(true);
                 numberBlueSelectMainStyle.setPreviewSelectNumberStyle(true);
                 numberBlueSelectMainStyle.setSelectBackground(R.drawable.ps_demo_blue_num_selector);
-                numberBlueSelectMainStyle.setMainListBackgroundColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                numberBlueSelectMainStyle.setMainListBackgroundColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
                 numberBlueSelectMainStyle.setPreviewSelectBackground(R.drawable.ps_demo_preview_blue_num_selector);
 
-                numberBlueSelectMainStyle.setSelectNormalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_9b));
-                numberBlueSelectMainStyle.setSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_blue));
-                numberBlueSelectMainStyle.setSelectText(R.string.ps_completed);
+                numberBlueSelectMainStyle.setSelectNormalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_9b));
+                numberBlueSelectMainStyle.setSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_blue));
+                numberBlueSelectMainStyle.setSelectText(com.luck.picture.lib.R.string.ps_completed);
 
                 selectorStyle.setTitleBarStyle(blueTitleBarStyle);
                 selectorStyle.setBottomBarStyle(numberBlueBottomNavBarStyle);
@@ -2146,21 +2148,21 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 numberSelectMainStyle.setSelectNumberStyle(true);
                 numberSelectMainStyle.setPreviewSelectNumberStyle(false);
                 numberSelectMainStyle.setPreviewDisplaySelectGallery(true);
-                numberSelectMainStyle.setSelectBackground(R.drawable.ps_default_num_selector);
-                numberSelectMainStyle.setPreviewSelectBackground(R.drawable.ps_preview_checkbox_selector);
-                numberSelectMainStyle.setSelectNormalBackgroundResources(R.drawable.ps_select_complete_normal_bg);
-                numberSelectMainStyle.setSelectNormalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_53575e));
-                numberSelectMainStyle.setSelectNormalText(R.string.ps_send);
-                numberSelectMainStyle.setAdapterPreviewGalleryBackgroundResource(R.drawable.ps_preview_gallery_bg);
+                numberSelectMainStyle.setSelectBackground(com.luck.picture.lib.R.drawable.ps_default_num_selector);
+                numberSelectMainStyle.setPreviewSelectBackground(com.luck.picture.lib.R.drawable.ps_preview_checkbox_selector);
+                numberSelectMainStyle.setSelectNormalBackgroundResources(com.luck.picture.lib.R.drawable.ps_select_complete_normal_bg);
+                numberSelectMainStyle.setSelectNormalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_53575e));
+                numberSelectMainStyle.setSelectNormalText(com.luck.picture.lib.R.string.ps_send);
+                numberSelectMainStyle.setAdapterPreviewGalleryBackgroundResource(com.luck.picture.lib.R.drawable.ps_preview_gallery_bg);
                 numberSelectMainStyle.setAdapterPreviewGalleryItemSize(DensityUtil.dip2px(getContext(), 52));
-                numberSelectMainStyle.setPreviewSelectText(R.string.ps_select);
+                numberSelectMainStyle.setPreviewSelectText(com.luck.picture.lib.R.string.ps_select);
                 numberSelectMainStyle.setPreviewSelectTextSize(14);
-                numberSelectMainStyle.setPreviewSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                numberSelectMainStyle.setPreviewSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
                 numberSelectMainStyle.setPreviewSelectMarginRight(DensityUtil.dip2px(getContext(), 6));
-                numberSelectMainStyle.setSelectBackgroundResources(R.drawable.ps_select_complete_bg);
-                numberSelectMainStyle.setSelectText(R.string.ps_send_num);
-                numberSelectMainStyle.setSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
-                numberSelectMainStyle.setMainListBackgroundColor(ContextCompat.getColor(getContext(), R.color.ps_color_black));
+                numberSelectMainStyle.setSelectBackgroundResources(com.luck.picture.lib.R.drawable.ps_select_complete_bg);
+                numberSelectMainStyle.setSelectText(com.luck.picture.lib.R.string.ps_send_num);
+                numberSelectMainStyle.setSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
+                numberSelectMainStyle.setMainListBackgroundColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_black));
                 numberSelectMainStyle.setCompleteSelectRelativeTop(true);
                 numberSelectMainStyle.setPreviewSelectRelativeBottom(true);
                 numberSelectMainStyle.setAdapterItemIncludeEdge(false);
@@ -2172,20 +2174,20 @@ public class MainActivity extends AppCompatActivity implements IBridgePictureBeh
                 if (cb_only_dir.isChecked()) {
                     numberTitleBarStyle.setTitleAlbumBackgroundResource(R.drawable.ps_demo_only_album_bg);
                 } else {
-                    numberTitleBarStyle.setTitleAlbumBackgroundResource(R.drawable.ps_album_bg);
+                    numberTitleBarStyle.setTitleAlbumBackgroundResource(com.luck.picture.lib.R.drawable.ps_album_bg);
                 }
-                numberTitleBarStyle.setTitleDrawableRightResource(R.drawable.ps_ic_grey_arrow);
-                numberTitleBarStyle.setPreviewTitleLeftBackResource(R.drawable.ps_ic_normal_back);
+                numberTitleBarStyle.setTitleDrawableRightResource(com.luck.picture.lib.R.drawable.ps_ic_grey_arrow);
+                numberTitleBarStyle.setPreviewTitleLeftBackResource(com.luck.picture.lib.R.drawable.ps_ic_normal_back);
 
                 // 底部NavBar 风格
                 BottomNavBarStyle numberBottomNavBarStyle = new BottomNavBarStyle();
-                numberBottomNavBarStyle.setBottomPreviewNarBarBackgroundColor(ContextCompat.getColor(getContext(), R.color.ps_color_half_grey));
-                numberBottomNavBarStyle.setBottomPreviewNormalText(R.string.ps_preview);
-                numberBottomNavBarStyle.setBottomPreviewNormalTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_9b));
+                numberBottomNavBarStyle.setBottomPreviewNarBarBackgroundColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_half_grey));
+                numberBottomNavBarStyle.setBottomPreviewNormalText(com.luck.picture.lib.R.string.ps_preview);
+                numberBottomNavBarStyle.setBottomPreviewNormalTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_9b));
                 numberBottomNavBarStyle.setBottomPreviewNormalTextSize(16);
                 numberBottomNavBarStyle.setCompleteCountTips(false);
-                numberBottomNavBarStyle.setBottomPreviewSelectText(R.string.ps_preview_num);
-                numberBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), R.color.ps_color_white));
+                numberBottomNavBarStyle.setBottomPreviewSelectText(com.luck.picture.lib.R.string.ps_preview_num);
+                numberBottomNavBarStyle.setBottomPreviewSelectTextColor(ContextCompat.getColor(getContext(), com.luck.picture.lib.R.color.ps_color_white));
 
 
                 selectorStyle.setTitleBarStyle(numberTitleBarStyle);

@@ -5,6 +5,7 @@ import android.widget.ImageView
 import coil.imageLoader
 import coil.request.ImageRequest
 import coil.transform.RoundedCornersTransformation
+import com.luck.picture.lib.R
 import com.luck.picture.lib.engine.ImageEngine
 import com.luck.picture.lib.utils.ActivityCompatHelper
 

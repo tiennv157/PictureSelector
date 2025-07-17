@@ -1,11 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 34
+    namespace 'com.luck.picture.lib'
+    compileSdk 35
 
     defaultConfig {
-        minSdk 19
-        targetSdk 34
+        minSdk 23
+        targetSdk 35
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -23,6 +24,9 @@ android {
     }
     lintOptions {
         abortOnError false
+    }
+    buildFeatures {
+        buildConfig true
     }
 }
 
